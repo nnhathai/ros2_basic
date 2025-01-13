@@ -24,8 +24,8 @@ git clone -b hieunm https://github.com/nnhathai/ros2_basic.git
 ```
 Lấy thư mục ros2_training cho vào thư mục docker_ws 
 ```
-mkdir docker_ws
-cd docker_ws
+mkdir ~/docker_ws
+cd ~/docker_ws
 ```
 ### Bước 2:
 Cài đặt Extension. Sau đó vào file Dockerfile dùng lệnh "CTRL + SHIFT + P" để tạo Container.
