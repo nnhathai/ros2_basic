@@ -44,10 +44,24 @@ docker exec -it <con_name> bash
 apt update
 apt install ros-humble-turtlesim
 ```
-### Bước 5: 
+### Bước 5: Chạy thử turtlesim
 ```
 ros2 run turtlesim turtlesim_node
 ```
 ```
 ros2 run turtlesim turtle_teleop_key
+```
+---
+### Bước 6: Chạy thử node
+```
+ws
+rosdep install --from-paths src --ignore-src -r -y
+colcon build
+```
+### Bước 7: 
+```
+ros2 run py_pubsub talker
+```
+```
+ros2 run py_pubsub listener
 ```

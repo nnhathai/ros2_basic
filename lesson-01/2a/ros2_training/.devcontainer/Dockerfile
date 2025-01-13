@@ -17,3 +17,4 @@ RUN echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 RUN echo "alias ws='cd /workspaces/ros2_training/ros2_ws'" >> ~/.bashrc
 
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+RUN echo "source /workspaces/ros2_training/ros2_ws/install/setup.bash" >> ~/.bashrc
