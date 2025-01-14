@@ -1,0 +1,35 @@
+{
+    "name": "ros2_training",
+    "build": {
+        "context": "",
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--network=host", //network
+        "--ipc=host",
+        "-v", "/dev:/dev", //recieve port on docker
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+        "-v", "/var/run/dbus:/var/run/dbus", // Mount DBus for Bluetooth communication
+        "--env", "DISPLAY", //UI GUI
+        "--privileged", //==sudo (root)
+        "--cap-add=NET_ADMIN", // Required for Bluetooth
+        "--cap-add=SYS_ADMIN" // Required for Bluetooth
+    ],
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}"
+    },
+ 
+    // extension
+    "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes",
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens"
+    ]
+}
